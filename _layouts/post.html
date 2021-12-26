@@ -1,0 +1,38 @@
+---
+layout: default
+---
+
+<small>{{ page.date | date: "%-d %B %Y" }}</small>
+<h1>{{ page.title }}</h1>
+
+<p class="view">by {{ page.author | default: site.author }}</p>
+
+{{content}}
+
+<small>
+  {% if page.tags.size == 1 %}
+  tag: 
+  {% else %}
+  tags: 
+  {% endif %}
+    <a href="/tags/#{{page.tags.first}}">{{page.tags.first}} </a> 
+  {% if page.tags.size != 1 %}
+    {% for tag in page.tags offset:1 %}
+      - <a href="/tags/#{{tag}}">{{tag}}</a>
+    {% endfor %}
+  {% endif %}
+</small><br/>
+
+<small>
+  {% if page.categories.size == 1 %}
+  category: 
+  {% else %}
+  categories: 
+  {% endif %}
+    <a href="/categories/#{{page.categories.first}}">{{page.categories.first}} </a> 
+  {% if page.categories.size != 1 %}
+    {% for category in page.categories offset:1 %}
+      - <a href="/categories/#{{category}}">{{category}}</a>
+    {% endfor %}
+  {% endif %}
+</small>

@@ -1,0 +1,9 @@
+title: 叔陈布真的博客
+author: 叔陈布真
+description: "欢迎！这里是叔陈布真的博客主页。<br/>
+本博客始于2021年12月17日，主要用于记录叔陈布真的学习轨迹。"
+show_downloads: false
+theme: jekyll-theme-minimal
+exclude: 
+  - License
+timezone: Asia/Shanghai
